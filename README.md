@@ -1,10 +1,6 @@
 # FinTrack - Aplikasi Pencatat Keuangan Mobile (Projek UTS)
 
-## Identitas Kelompok / Mahasiswa
-- Nama: [Kosongkan untuk diisi user]
-- NIM: [Kosongkan untuk diisi user]
-- Mata Kuliah: Pemrograman Mobile
-- Program Studi: Teknik Informatika
+
 
 ## Deskripsi Aplikasi
 FinTrack adalah aplikasi mobile native berbasis Android yang dirancang untuk membantu mahasiswa mengelola arus kas (pemasukan dan pengeluaran) secara efisien. Aplikasi ini dibangun dengan arsitektur MVC dan antarmuka "Clean UI" minimalis untuk memberikan pengalaman pengguna yang elegan dan ringan.
