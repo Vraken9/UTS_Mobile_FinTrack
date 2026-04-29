@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Finance</string>
+    <string-array name="categories_expense">
+        <item>Makan &amp; Minum</item>
+        <item>Transportasi</item>
+        <item>Belanja</item>
+        <item>Tagihan</item>
+        <item>Hiburan</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="categories_income">
+        <item>Gaji</item>
+        <item>Tips</item>
+        <item>Bonus</item>
+        <item>Investasi</item>
+    </string-array>
+    <string-array name="categories_transfer">
+        <item>Antar Rekening</item>
+        <item>Simpanan</item>
+        <item>Investasi</item>
+        <item>Lainnya</item>
+    </string-array>
+    <string-array name="payment_methods">
+        <item>Tunai</item>
+        <item>Bank Transfer</item>
+        <item>E-Wallet</item>
+    </string-array>
+    <string-array name="transfer_methods">
+        <item>Bank Transfer</item>
+        <item>E-Wallet</item>
+    </string-array>
+    <string name="about_text">Aplikasi ini dibuat untuk tugas pemrograman mobile di Universitas Ma\'arif Nahdlatul Ulama (UMNU) Kebumen.</string>
+</resources>

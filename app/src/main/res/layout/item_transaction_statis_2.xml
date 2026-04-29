@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    android:layout_marginBottom="8dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+        <TextView android:id="@+id/t_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gaji Bulanan" android:textColor="@color/navy" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/t_name" android:text="Gaji • 08:00 • 01 Jun" android:textSize="12sp" android:textColor="#64748B"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:text="+ Rp 3.000.000" android:textColor="@color/income" android:textStyle="bold"/>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

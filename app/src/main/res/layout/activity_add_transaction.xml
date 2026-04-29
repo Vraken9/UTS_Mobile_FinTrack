@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Transaksi"
+            android:textColor="@color/navy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipe Transaksi"
+                    android:textColor="@color/navy"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton android:id="@+id/rb_income" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pemasukan" android:checked="true"/>
+                    <RadioButton android:id="@+id/rb_expense" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pengeluaran"/>
+                    <RadioButton android:id="@+id/rb_transfer" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Transfer"/>
+                </RadioGroup>
+
+                <!-- Nominal Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nominal"
+                    android:textColor="@color/navy"
+                    android:layout_marginBottom="8dp"/>
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Rp 0"
+                    android:inputType="number"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Date & Time Picker UI -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tanggal" android:textSize="12sp"/>
+                        <Button android:id="@+id/btn_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="12/06/2024" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Waktu" android:textSize="12sp"/>
+                        <Button android:id="@+id/btn_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="14:30" style="@style/Widget.Material3.Button.OutlinedButton"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Transfer Specific Fields -->
+                <LinearLayout android:id="@+id/layout_transfer_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ke Siapa / Rekening Mana?" android:textColor="@color/navy" android:layout_marginBottom="8dp"/>
+                    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nama Penerima / Bank" android:layout_marginBottom="16dp"/>
+                </LinearLayout>
+
+                <!-- Category & Add Category UI -->
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kategori" android:textColor="@color/navy" android:layout_centerVertical="true"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="+ Tambah" style="@style/Widget.Material3.Button.TextButton" android:textSize="12sp"/>
+                </RelativeLayout>
+                <Spinner android:id="@+id/sp_category" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp"/>
+
+                <!-- Payment Method & Add Payment UI -->
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Metode Pembayaran" android:textColor="@color/navy" android:layout_centerVertical="true"/>
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="+ Tambah" style="@style/Widget.Material3.Button.TextButton" android:textSize="12sp"/>
+                </RelativeLayout>
+                <Spinner android:id="@+id/sp_payment" android:layout_width="match_parent" android:layout_height="wrap_content" android:entries="@array/payment_methods" android:layout_marginBottom="16dp"/>
+
+                <!-- Long Description -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Catatan / Deskripsi" android:textColor="@color/navy" android:layout_marginBottom="8dp"/>
+                <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tulis deskripsi di sini..." android:gravity="top" android:lines="3" android:layout_marginBottom="16dp"/>
+
+                <!-- Image Input UI -->
+                <Button android:id="@+id/btn_upload" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lampirkan Bukti Foto" android:drawableStart="@android:drawable/ic_menu_camera" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_marginBottom="24dp"/>
+
+                <Button android:id="@+id/btn_save" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Simpan" android:backgroundTint="@color/navy" android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

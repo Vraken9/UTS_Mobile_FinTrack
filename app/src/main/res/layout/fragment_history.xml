@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Transaksi"
+            android:textColor="@color/navy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- 20 Dummy Data Sinkronisasi 29 April 2026 -->
+
+        <!-- Item 1 (Hari Ini) -->
+        <include layout="@layout/item_history_interactive" />
+
+        <!-- Item 2 -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/white" app:cardCornerRadius="12dp" android:layout_marginBottom="8dp" android:clickable="true" android:focusable="true" android:foreground="?attr/selectableItemBackground">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true" android:layout_toStartOf="@+id/act2">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beli Kopi" android:textColor="@color/navy" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- Rp 18.000" android:textColor="@color/expense" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29 Apr 2026 • 15:30" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/act2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
+                    <ImageButton android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_edit" android:background="?attr/selectableItemBackgroundBorderless" app:tint="#94A3B8" android:padding="6dp" android:scaleType="fitCenter"/><ImageButton android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_delete" android:background="?attr/selectableItemBackgroundBorderless" app:tint="@color/expense" android:padding="6dp" android:scaleType="fitCenter" android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Item 3 (Pemasukan) -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/white" app:cardCornerRadius="12dp" android:layout_marginBottom="8dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_alignParentStart="true">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bonus Project" android:textColor="@color/navy" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Rp 1.500.000" android:textColor="@color/income" android:textStyle="bold"/><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28 Apr 2026 • 10:00" android:textSize="11sp" android:textColor="#64748B"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:orientation="horizontal">
+                    <ImageButton android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_edit" android:background="?attr/selectableItemBackgroundBorderless" app:tint="#94A3B8" android:padding="6dp"/><ImageButton android:layout_width="32dp" android:layout_height="32dp" android:src="@android:drawable/ic_menu_delete" android:background="?attr/selectableItemBackgroundBorderless" app:tint="@color/expense" android:padding="6dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Repeat for 17 more items (compact code to save space but show scroll) -->
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+        <include layout="@layout/item_history_interactive" />
+
+    </LinearLayout>
+</ScrollView>
